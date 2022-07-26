@@ -8,6 +8,7 @@ import initDropdownMenu from './modules/dropdown-menu.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initAnimaNumero from './modules/anima-numero.js';
 import initFuncionamento from './modules/funcionamento.js';
+import fetchAnimais from './modules/fetch-animais.js';
 
 initTabNav();
 initAccordion();
@@ -19,3 +20,4 @@ initDropdownMenu();
 initMenuMobile();
 initAnimaNumero();
 initFuncionamento();
+fetchAnimais();
