@@ -73,13 +73,12 @@ const transacoes2 = [
   'TARIFA especial',
 ];
 
-let disgrama;
-const merda = transacoes2.forEach((transacao) => {
-  transacao.toLowerCase().trim();
+let taxasTotal = 0;
+transacoes2.forEach((transacao) => {
+  transacao = transacao.toLocaleLowerCase().trim().startsWith('taxa');
+  if (transacao) {
+    taxasTotal++;
+  }
 });
 
-console.log(disgrama);
-
-const teste = transacoes2.join(', ').toLocaleLowerCase();
-
-// console.log(teste);
+console.log(taxasTotal);
