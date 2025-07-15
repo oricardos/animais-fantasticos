@@ -8,6 +8,7 @@ import initDropdown from './modules/dropdown.js';
 import menuMobile from './modules/menuMobile.js';
 import funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetchAnimais.js';
+import fetchBitcoin from './modules/fetchBitcoin.js';
 
 // initSmoothScroll();
 initiAnimateScroll();
@@ -19,3 +20,4 @@ initDropdown();
 menuMobile();
 funcionamento();
 fetchAnimais();
+// fetchBitcoin();
