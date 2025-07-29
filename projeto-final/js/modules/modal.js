@@ -27,6 +27,7 @@ export default class Modal {
     if (this.open && this.close && this.container) {
       this.addModalEvent();
     }
+    return this;
   }
 
   clickOutside(evt) {
