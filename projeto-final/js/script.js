@@ -1,7 +1,7 @@
 // import initSmoothScroll from './modules/scroll-suave.js';
 import initiAnimateScroll from './modules/initiAnimateScroll.js';
 import Accordion from './modules/initAccordion.js';
-import initTabNav from './modules/initTabNav.js';
+import TabNav from './modules/initTabNav.js';
 import initModal from './modules/modal.js';
 import initTooltip from './modules/tooltip.js';
 import initDropdown from './modules/dropdown.js';
@@ -12,9 +12,15 @@ import fetchBitcoin from './modules/fetchBitcoin.js';
 
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
+
+const tabNav = new TabNav(
+  '[data-tab="menu"] li',
+  '[data-tab="content"] section'
+);
+tabNav.init();
+
 // initSmoothScroll();
 initiAnimateScroll();
-initTabNav();
 initModal();
 initTooltip();
 initDropdown();
