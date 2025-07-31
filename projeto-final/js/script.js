@@ -3,13 +3,14 @@ import initiAnimateScroll from './modules/initiAnimateScroll.js';
 import Accordion from './modules/initAccordion.js';
 import TabNav from './modules/initTabNav.js';
 import Modal from './modules/modal.js';
-import initTooltip from './modules/tooltip.js';
+import Tooltip from './modules/tooltip.js';
 import initDropdown from './modules/dropdown.js';
 import menuMobile from './modules/menuMobile.js';
 import funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetchAnimais.js';
 import fetchBitcoin from './modules/fetchBitcoin.js';
 
+initiAnimateScroll();
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
@@ -26,9 +27,9 @@ const modal = new Modal(
 );
 modal.init();
 
-// initSmoothScroll();
-initiAnimateScroll();
-initTooltip();
+const tooltip = new Tooltip('[data-tooltip]');
+tooltip.init();
+
 initDropdown();
 menuMobile();
 funcionamento();
