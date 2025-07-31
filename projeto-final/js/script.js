@@ -10,6 +10,7 @@ import funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetchAnimais.js';
 import fetchBitcoin from './modules/fetchBitcoin.js';
 
+initiAnimateScroll();
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
@@ -29,8 +30,6 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-// initSmoothScroll();
-initiAnimateScroll();
 initDropdown();
 menuMobile();
 funcionamento();
