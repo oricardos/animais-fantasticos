@@ -20,11 +20,8 @@ export default function fetchAnimais(url, target) {
 
   async function fetchAnimals() {
     try {
-      console.log(url);
       const animals = await fetch(url);
       const animalsJSON = await animals.json();
-
-      console.log(animalsJSON);
 
       animalsJSON.forEach((animal) => preencherAnimal(animal));
 
