@@ -34,4 +34,4 @@ initDropdown();
 menuMobile();
 funcionamento();
 fetchAnimais('./animaisapi.json', '.numeros-grid');
-// fetchBitcoin();
+// fetchBitcoin('https://blockchain.info/ticker', '.btc');
