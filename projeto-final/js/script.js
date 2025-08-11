@@ -1,14 +1,14 @@
 // import initSmoothScroll from './modules/scroll-suave.js';
-import AnimateScroll from './modules/initiAnimateScroll.js';
-import Accordion from './modules/initAccordion.js';
-import TabNav from './modules/initTabNav.js';
-import Modal from './modules/modal.js';
-import Tooltip from './modules/tooltip.js';
-import Dropdown from './modules/dropdown.js';
-import menuMobile from './modules/menuMobile.js';
-import funcionamento from './modules/funcionamento.js';
-import fetchAnimais from './modules/fetchAnimais.js';
-import fetchBitcoin from './modules/fetchBitcoin.js';
+import AnimateScroll from "./modules/initiAnimateScroll.js";
+import Accordion from "./modules/initAccordion.js";
+import TabNav from "./modules/initTabNav.js";
+import Modal from "./modules/modal.js";
+import Tooltip from "./modules/tooltip.js";
+import Dropdown from "./modules/dropdown.js";
+import MenuMobile from "./modules/menuMobile.js";
+import funcionamento from "./modules/funcionamento.js";
+import fetchAnimais from "./modules/fetchAnimais.js";
+import fetchBitcoin from "./modules/fetchBitcoin.js";
 
 const animateScroll = new AnimateScroll('[data-anime="scroll"]');
 animateScroll.init();
@@ -28,13 +28,18 @@ const modal = new Modal(
 );
 modal.init();
 
-const tooltip = new Tooltip('[data-tooltip]');
+const tooltip = new Tooltip("[data-tooltip]");
 tooltip.init();
 
-const dropdown = new Dropdown('[data-dropdown]');
-dropdown.init()
+const dropdown = new Dropdown("[data-dropdown]");
+dropdown.init();
 
-menuMobile();
+const menuMobile = new MenuMobile(
+  '[data-menu="button"]',
+  '[data-menu="list"]'
+);
+menuMobile.init();
+
 funcionamento();
 fetchAnimais();
 // fetchBitcoin();
