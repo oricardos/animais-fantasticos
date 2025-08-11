@@ -1,26 +1,37 @@
 export default class AnimateScroll {
-  constructor(sections){
+  constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.halfScreen = window.innerHeight * 0.5;
 
-    this.animateScroll = this.animateScroll.bind(this);
+    this.checkDistance = this.checkDistance.bind(this);
   }
 
-  animateScroll() {
-    this.sections.forEach((section) => {
-      const sectionTop = section.getBoundingClientRect().top;
-      const isSectionVisible = sectionTop - this.halfScreen < 0;
+  getDistance() {
+    this.distance = [...this.sections].map((section) => {
+      const offset = section.offsetTop;
+      return {
+        element: section,
+        offset: Math.floor(offset - this.halfScreen),
+      };
+    });
+  }
 
-      if (isSectionVisible) {
-        section.classList.add('ativo');
-      } else if (section.classList.contains('ativo')) {
-        section.classList.remove('ativo');
+  checkDistance() {
+    this.distance.forEach((item) => {
+      if (window.pageYOffset > item.offset) {
+        item.element.classList.add("ativo");
+      } else if (item.element.classList.contains("ativo")) {
+        item.element.classList.remove("ativo");
       }
     });
   }
 
-  init(){
-    this.animateScroll();
-    window.addEventListener('scroll', this.animateScroll);
-  };
+  init() {
+    if (this.sections.length) {
+      this.getDistance();
+      this.checkDistance();
+      window.addEventListener("scroll", this.checkDistance);
+    }
+    return this;
+  }
 }
