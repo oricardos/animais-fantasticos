@@ -6,7 +6,7 @@ import Modal from "./modules/modal.js";
 import Tooltip from "./modules/tooltip.js";
 import Dropdown from "./modules/dropdown.js";
 import MenuMobile from "./modules/menuMobile.js";
-import funcionamento from "./modules/funcionamento.js";
+import OpeningHours from "./modules/openingHours.js";
 import fetchAnimais from "./modules/fetchAnimais.js";
 import fetchBitcoin from "./modules/fetchBitcoin.js";
 
@@ -40,6 +40,8 @@ const menuMobile = new MenuMobile(
 );
 menuMobile.init();
 
-funcionamento();
+const openingHours = new OpeningHours('[data-semana]');
+openingHours.init();
+
 fetchAnimais();
 // fetchBitcoin();
