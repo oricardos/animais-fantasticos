@@ -4,7 +4,7 @@ import Accordion from './modules/initAccordion.js';
 import TabNav from './modules/initTabNav.js';
 import Modal from './modules/modal.js';
 import Tooltip from './modules/tooltip.js';
-import initDropdown from './modules/dropdown.js';
+import Dropdown from './modules/dropdown.js';
 import menuMobile from './modules/menuMobile.js';
 import funcionamento from './modules/funcionamento.js';
 import fetchAnimais from './modules/fetchAnimais.js';
@@ -31,7 +31,9 @@ modal.init();
 const tooltip = new Tooltip('[data-tooltip]');
 tooltip.init();
 
-initDropdown();
+const dropdown = new Dropdown('[data-dropdown]');
+dropdown.init()
+
 menuMobile();
 funcionamento();
 fetchAnimais();
