@@ -12,6 +12,7 @@ import fetchBitcoin from "./modules/fetchBitcoin.js";
 
 const animateScroll = new AnimateScroll('[data-anime="scroll"]');
 animateScroll.init();
+
 const accordion = new Accordion('[data-anime="accordion"] dt');
 accordion.init();
 
