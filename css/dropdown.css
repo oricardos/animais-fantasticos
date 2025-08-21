@@ -53,3 +53,10 @@
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 700px) {
+  [data-dropdown] .dropdown-menu {
+    display: block;
+    animation: showup 0.3s forwards;
+  }
+}
